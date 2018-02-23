@@ -8,14 +8,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script type="text/javascript" src="javascript_funzioni.js"></script>
+    <script type="text/javascript" src="JavaScriptFunzioni.js"></script>
     <title>DATABASE</title>
 </head>
 <body onload="selezione()">
 <br>
 
 <div class="container">
-    <form method="get" action="button_invia.php" >
+    <form method="get" action="formInsert.php" >
         <button ='submit'  class="col-lg-12 btn btn-success" >
             <span class="glyphicon glyphicon-plus"></span>
                 Aggiungi

@@ -22,6 +22,6 @@ if (isset($_GET['nome']) && isset($_GET['cognome']) && isset($_GET['email'])) {
     }
 
     $conn->close();
-    header("Location: ASLDBCRUD.php");
+    header("Location: main.php");
 }
     ?>

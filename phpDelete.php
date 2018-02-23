@@ -14,5 +14,5 @@ if ($conn->query($sql) == TRUE) {
     echo "Error deleting record: " . $conn->error;
 }
 
-header("Location: ASLDBCRUD.php");
+header("Location: main.php");
 $conn->close();

@@ -1,4 +1,4 @@
-<script type="text/javascript" src="javascript_funzioni.js"> </script>
+<script type="text/javascript" src="JavaScriptFunzioni.js"> </script>
 <?php
 $servername = "localhost";
 $username = "root";

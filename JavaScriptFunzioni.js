@@ -80,7 +80,7 @@ function selezione() {
                 this.responseText;
         }
     };
-    xhttp.open("GET", "select.php", true);
+    xhttp.open("GET", "phpSelect.php", true);
     xhttp.send();
 }
 
@@ -142,6 +142,6 @@ function eliminazione(Id){
             selezione();
         }
     };
-    xhttp.open("GET", "button_elimina.php?Id="+Id, true);
+    xhttp.open("GET", "phpDelete.php?Id="+Id, true);
     xhttp.send();
 }
