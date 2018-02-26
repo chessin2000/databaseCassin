@@ -18,7 +18,7 @@
     <form method="get" action="formInsert.php" >
         <button ='submit' class="col-lg-12 btn btn-success">
             <span class="glyphicon glyphicon-plus"></span>
-                Aggiungi
+                AGGIUNGI
         </button>
     </form>
     <br> <br> <br>

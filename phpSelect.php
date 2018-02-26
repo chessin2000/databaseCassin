@@ -7,9 +7,8 @@ $conn = new mysqli($servername, $username, $password,$dbname);
 
 $sql = "SELECT ID, NOME, COGNOME, EMAIL FROM dbasl";
 $result = $conn->query($sql);
-if ($result->num_rows > 0)
-{
-    echo
+
+echo
     ("<tr>
         <th onclick='ordinamento(\"Id\");'>
             <center>
@@ -39,6 +38,8 @@ if ($result->num_rows > 0)
         <th><center>ELIMINA</center></th>
     </tr>");
 
+if ($result->num_rows > 0)
+{
     while($row = $result->fetch_assoc())
     {
         $ID=$row["ID"];
@@ -64,7 +65,7 @@ if ($result->num_rows > 0)
                     <input type = 'hidden' name = 'nome' value = '$nome' >
                     <input type = 'hidden' name = 'cognome' value = '$cognome'>
                     <input type = 'hidden' name = 'email' value = '$email'>
-                    <input type = 'hidden' name = 'Id' value = '$ID'>
+                    <input type = 'hidden' name = 'Id' value = '$ID' id='identificativo'>
                     <button type = 'submit' class='btn btn-warning'>
                         <span class = 'glyphicon glyphicon-edit'></span>
                     </button>

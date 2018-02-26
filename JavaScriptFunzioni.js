@@ -41,6 +41,11 @@ function selezione()
     $("#tabella").load("phpSelect.php");
 }
 
+function eliminazione(id)
+{
+    $("#identificativo").load("phpDelete.php?Id="+id, function() { selezione(); });
+}
+/*
 function agg(elemento,tipo,id){
     var nome="",cognome="",email="";
     appoggio=elemento.innerHTML;
@@ -92,14 +97,4 @@ function aggiornamento(elemento) {
     xhttp.open("GET", "Update.php?nome=" + nome + "&cognome=" + cognome + "&email=" + email +"&Identificativo="+id, true);
     xhttp.send();
 }
-
-function eliminazione(Id){
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-            selezione();
-        }
-    };
-    xhttp.open("GET", "phpDelete.php?Id="+Id, true);
-    xhttp.send();
-}
+*/
