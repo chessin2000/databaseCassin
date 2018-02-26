@@ -19,4 +19,3 @@ $sql = "UPDATE dbasl SET NOME='$Nome', COGNOME='$Cognome', EMAIL='$Email' WHERE 
 $conn->query($sql);
 $conn->close();
 header("Location: main.php");
-?>

@@ -5,22 +5,13 @@ function ricerca()
     for ( var i = 0; i < casella.length; i++ )
     {
         if(!ricerca)
-        {
-            casella[i].style.backgroundColor = "#ffffff";
-            casella[i].style.color = "#000000";
-        }
+        { casella[i].style.backgroundColor = "#ffffff"; }
         else
         {
             if (casella[i].innerHTML.toUpperCase().search(ricerca.toUpperCase()) > -1 && (casella[i].innerHTML.search("<")) === -1)
-            {
-                casella[i].style.backgroundColor = "#000000";
-                casella[i].style.color = "#ffffff";
-            }
+            { casella[i].style.backgroundColor = "#f2ff44"; }
             else
-            {
-                casella[i].style.backgroundColor = "#ffffff";
-                casella[i].style.color = "#000000";
-            }
+            { casella[i].style.backgroundColor = "#ffffff"; }
         }
     }
 }
@@ -31,6 +22,7 @@ function ordinamento(tipo)
     var tmp2=new Array();
     var righe = document.getElementsByTagName("tr");
     var colonne = document.getElementsByName(tipo);
+
     for(var i=0;i<colonne.length;i++)
     {
         tmp[i]=colonne[i].value.toLowerCase() + i.toString();
@@ -44,44 +36,9 @@ function ordinamento(tipo)
     }
 }
 
-function selezione() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-            document.getElementById("tabella").innerHTML =
-        "<tr>"+
-            "<th onclick='ordinamento(\"Id\");'>"+
-                "<center>"+
-                    "<span class='glyphicon glyphicon-chevron-down'></span>"+
-                    "N°"+
-                "</center>"+
-            "</th>"+
-            "<th onclick='ordinamento(\"nome\");'>"+
-                "<center>"+
-                    "<span class='glyphicon glyphicon-chevron-down'></span>"+
-                    "NOME"+
-                "</center>"+
-            "</th>"+
-            "<th onclick='ordinamento(\"cognome\");'>"+
-                "<center>"+
-                    "<span class='glyphicon glyphicon-chevron-down'></span>"+
-                    "COGNOME"+
-                "</center>"+
-            "</th>"+
-            "<th onclick='ordinamento(\"email\");'>"+
-                "<center>"+
-                    "<span class='glyphicon glyphicon-chevron-down'></span>"+
-                    "EMAIL"+
-                "</center>"+
-            "</th>"+
-            "<th><center>AGGIORNA</center></th>"+
-            "<th><center>ELIMINA</center></th>"+
-            "</tr>"+
-                this.responseText;
-        }
-    };
-    xhttp.open("GET", "phpSelect.php", true);
-    xhttp.send();
+function selezione()
+{
+    $("#tabella").load("phpSelect.php");
 }
 
 function agg(elemento,tipo,id){
@@ -102,6 +59,7 @@ function agg(elemento,tipo,id){
 }
 
 function aggiunta(elemento) {
+    $("input").load("phpInsert.php");
     var xhttp = new XMLHttpRequest();
     var nome=elemento.getElementsByTagName('input')[0].value;
     var cognome=elemento.getElementsByTagName('input')[1].value;

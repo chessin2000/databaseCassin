@@ -1,6 +1,7 @@
 <?php
 
-if (isset($_GET['nome']) && isset($_GET['cognome']) && isset($_GET['email'])) {
+if (isset($_GET['nome']) && isset($_GET['cognome']) && isset($_GET['email']))
+{
     $Nome = htmlentities($_GET['nome']);
     $Cognome = htmlentities($_GET['cognome']);
     $Email = htmlentities($_GET['email']);
@@ -24,4 +25,3 @@ if (isset($_GET['nome']) && isset($_GET['cognome']) && isset($_GET['email'])) {
     $conn->close();
     header("Location: main.php");
 }
-    ?>

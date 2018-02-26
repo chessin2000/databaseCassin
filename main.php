@@ -16,18 +16,18 @@
 
 <div class="container">
     <form method="get" action="formInsert.php" >
-        <button ='submit'  class="col-lg-12 btn btn-success" >
+        <button ='submit' class="col-lg-12 btn btn-success">
             <span class="glyphicon glyphicon-plus"></span>
                 Aggiungi
         </button>
     </form>
     <br> <br> <br>
-    <table align = "center" id="tabella"  class="table" >
-</table>
     <div class="input-group">
         <span class="input-group-addon" id="search-query"><span class="glyphicon glyphicon-search"></span></span>
         <input type="text" class="form-control" placeholder="Cerca nella tabella" id="ricerca" onkeyup="ricerca();">
     </div>
+    <br> <br>
+    <table align="center" id="tabella" class="table table-hoover"></table>
 </div>
 </body>
 </html>
