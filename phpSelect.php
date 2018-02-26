@@ -1,18 +1,18 @@
 <?php
-$servername = "localhost";
+$server = "localhost";
 $username = "root";
-$password="";
-$dbname="nuovo";
-$conn = new mysqli($servername, $username, $password,$dbname);
+$password = "";
+$database = "nuovo";
+$conn = new mysqli($server, $username, $password, $database);
 
 $i = 0;
 
 $sql = "SELECT ID, NOME, COGNOME, EMAIL FROM dbasl";
-$result = $conn->query($sql);
+$risultato = $conn->query($sql);
 
 echo
     ("<tr bgcolor='#d7d7d7'>>
-        <th onclick='ordinamento(\"Id\");'>
+        <th onclick='ordinamento(\"id\");'>
             <center>
                 <span class='glyphicon glyphicon-chevron-down'></span>
                 N°
@@ -39,14 +39,14 @@ echo
         <th><center>AGGIORNA / ELIMINA</center></th>
     </tr>");
 
-if ($result->num_rows > 0)
+if ($risultato->num_rows > 0)
 {
-    while($row = $result->fetch_assoc())
+    while($riga = $risultato->fetch_assoc())
     {
-        $ID=$row["ID"];
-        $nome = $row["NOME"];
-        $cognome = $row["COGNOME"];
-        $email = $row["EMAIL"];
+        $ID=$riga["ID"];
+        $nome = $riga["NOME"];
+        $cognome = $riga["COGNOME"];
+        $email = $riga["EMAIL"];
 
         if ($i%2==0)
         { echo ("<tr bgcolor='#ffffff'>"); }
@@ -56,27 +56,27 @@ if ($result->num_rows > 0)
 
         echo
             ("<td align = 'center'> " .
-                $row["ID"] .
+                $riga["ID"] .
             "</td>
             <td align = 'center'> " .
-                $row["NOME"] .
+                $riga["NOME"] .
             "</td>
             <td align = 'center'> " .
-                $row["COGNOME"] .
+                $riga["COGNOME"] .
             "</td>
             <td align = 'center'> " .
-                $row["EMAIL"] .
+                $riga["EMAIL"] .
             "</td>
             <td align = 'center'>
                 <input type = 'hidden' name = 'nome' value = '$nome' >
                 <input type = 'hidden' name = 'cognome' value = '$cognome'>
                 <input type = 'hidden' name = 'email' value = '$email'>
-                <input type = 'hidden' name = 'Id' value = '$ID' id='identificativo'>
+                <input type = 'hidden' name = 'id' value = '$ID' id='identificativo'>
                 <div class='btn-group'>
-                    <button type = 'submit' class='btn btn-warning'>
+                    <button style = 'height: 35px; width: 100px' class='btn btn-warning'>
                         <span class = 'glyphicon glyphicon-edit'></span>
                     </button>
-                    <button type = 'submit' onclick='eliminazione($ID)' class='btn btn-danger'>
+                    <button style = 'height: 35px; width: 100px' onclick='eliminazione($ID)' class='btn btn-danger'>
                         <span class = 'glyphicon glyphicon-trash'></span>
                     </button>
                 </div>

@@ -45,7 +45,7 @@ function eliminazione(id)
 {
     $("#identificativo").load("phpDelete.php?Id="+id, function() { selezione(); });
 }
-/*
+
 function agg(elemento,tipo,id){
     var nome="",cognome="",email="";
     appoggio=elemento.innerHTML;
@@ -97,4 +97,3 @@ function aggiornamento(elemento) {
     xhttp.open("GET", "Update.php?nome=" + nome + "&cognome=" + cognome + "&email=" + email +"&Identificativo="+id, true);
     xhttp.send();
 }
-*/

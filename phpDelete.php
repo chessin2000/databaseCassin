@@ -1,16 +1,18 @@
 <?php
 
-$servername = "localhost";
+$server = "localhost";
 $username = "root";
-$password="";
-$dbname="nuovo";
-$id = $_GET['Id'];
-$conn =  new mysqli($servername, $username, $password, $dbname);
+$password = "";
+$databse = "nuovo";
+$ID = $_GET['id'];
+$conn =  new mysqli($server, $username, $password, $database);
 
 $sql = "DELETE FROM dbasl WHERE ID='$id'";
-if ($conn->query($sql) == TRUE) {
+if ($conn->query($sql) == TRUE)
+{
     echo "Record deleted successfully";
-} else {
+} else
+{
     echo "Error deleting record: " . $conn->error;
 }
 

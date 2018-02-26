@@ -11,22 +11,32 @@
 <body>
 <div class="container">
     <form action="phpInsert.php" method="get">
-    <h2>Inserisci i dati</h2>
+        <h2>Inserisci i dati</h2>
         <div class="input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-user">
+                </span>
+            </span>
             <input type="text" class="form-control" name="nome" placeholder="Nome" required>
         </div>
         <div class="input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-user">
+                </span>
+            </span>
             <input type="text" class="form-control" name="cognome" placeholder="Cognome" required>
         </div>
         <div class="input-group">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+            <span class="input-group-addon">
+                <span class="glyphicon glyphicon-envelope">
+                </span>
+            </span>
             <input type="email" class="form-control" name="email" placeholder="Email" required>
         </div>
         <br>
-        <button type='submit' value="aggiungi" name="aggiungi" class="btn btn-success form-control" >
-            <span class="glyphicon glyphicon-send"></span>
+        <button type='submit' value="aggiungi" class="btn btn-success form-control">
+            <span class="glyphicon glyphicon-send">
+            </span>
             Invia
         </button>
     </form>

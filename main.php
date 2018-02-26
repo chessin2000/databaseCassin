@@ -23,7 +23,10 @@
     </form>
     <br> <br> <br>
     <div class="input-group">
-        <span class="input-group-addon" id="search-query"><span class="glyphicon glyphicon-search"></span></span>
+        <span class="input-group-addon">
+            <span class="glyphicon glyphicon-search">
+            </span>
+        </span>
         <input type="text" class="form-control" placeholder="Cerca nella tabella" id="ricerca" onkeyup="ricerca();">
     </div>
     <br> <br>

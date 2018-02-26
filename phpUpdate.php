@@ -1,20 +1,21 @@
 <?php
-$Nome = htmlentities($_GET['nome']);
-$Cognome = htmlentities($_GET['cognome']);
-$Email = htmlentities($_GET['email']);
-$servername = "localhost";
+$nome = htmlentities($_GET['nome']);
+$cognome = htmlentities($_GET['cognome']);
+$email = htmlentities($_GET['email']);
+$server = "localhost";
 $username = "root";
 $password = "";
-$dbname = "nuovo";
-$id = $_GET['Id'];
+$database = "nuovo";
+$ID = $_GET['id'];
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($server, $username, $password, $database);
 
-if (!$conn) {
+if (!$conn)
+{
     die("Connessione non stabilita: " . mysqli_connect_error());
 }
 
-$sql = "UPDATE dbasl SET NOME='$Nome', COGNOME='$Cognome', EMAIL='$Email' WHERE ID='$id'";
+$sql = "UPDATE dbasl SET NOME='$nome', COGNOME='$cognome', EMAIL='$email' WHERE ID='$ID'";
 
 $conn->query($sql);
 $conn->close();

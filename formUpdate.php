@@ -14,22 +14,25 @@
         <h2>Modifica i dati</h2>
         <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type='text' class="form-control" name='nome' placeholder='Nome' value="<?php echo $_GET['nome']; ?>" required>
+            <input type='text' class="form-control" name='nome' placeholder='Nome' value="<?php echo $_GET['nome']; ?>"
+                   required>
         </div>
         <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type='text' class="form-control" name='cognome' placeholder='Cognome' value='<?php echo $_GET['cognome']; ?>' required>
+            <input type='text' class="form-control" name='cognome' placeholder='Cognome'
+                   value='<?php echo $_GET['cognome']; ?>' required>
         </div>
         <div class="input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
-            <input type='email' class="form-control" name='email' placeholder='Email' value='<?php echo $_GET['email']; ?>' required>
+            <input type='email' class="form-control" name='email' placeholder='Email'
+                   value='<?php echo $_GET['email']; ?>' required>
         </div>
         <br>
         <button value="Aggiorna" name="aggiorna" class="btn btn-success form-control" type="submit">
             <span class="glyphicon glyphicon-send"></span>
             Invia
         </button>
-        <input type ='hidden' class="form-control" name ='Id' value ='<?php echo $_GET['Id']; ?>'>
+        <input type='hidden' class="form-control" name='Id' value='<?php echo $_GET['Id']; ?>'>
         <br>
     </form>
 </div>
