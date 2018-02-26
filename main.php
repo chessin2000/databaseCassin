@@ -8,7 +8,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script type="text/javascript" src="JavaScriptFunzioni.js"></script>
+    <script type="text/javascript" src="javascriptFunzioni.js"></script>
     <title>DATABASE</title>
 </head>
 <body onload="selezione()">
@@ -27,7 +27,7 @@
         <input type="text" class="form-control" placeholder="Cerca nella tabella" id="ricerca" onkeyup="ricerca();">
     </div>
     <br> <br>
-    <table align="center" id="tabella" class="table table-hoover"></table>
+    <table align="center" id="tabella" class="table"></table>
 </div>
 </body>
 </html>
